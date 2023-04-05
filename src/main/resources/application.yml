@@ -1,0 +1,26 @@
+#spring:
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    show-sql: true
+#  h2:
+#    console:
+#      enabled: true
+#      path: /console
+#
+#server:
+#  port: 8083
+#
+#spring:
+#  jpa:
+#  show-sql: true
+#
+#  h2:
+#  console:
+#  enabled: true
+#
+#datasource:
+#  url : jdbc:h2:mem:testdb
+#
+#jpa:
+#  hibernate:
+#  ddl-auto : update
