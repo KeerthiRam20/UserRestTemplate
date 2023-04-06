@@ -4,16 +4,16 @@ package com.example.UserRestTemplate.Entity;
 
 public class DepartmentDto {
 
-	private Long departmentid;
+	private Long id;
     private String departmentName;
     private String departmentAddress;
     private String departmentCode;
     
-    public Long getDepartmentid() {
-		return departmentid;
+    public Long getId() {
+		return id;
 	}
-	public void setDepartmentid(Long departmentid) {
-		this.departmentid = departmentid;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	public String getDepartmentName() {
@@ -38,15 +38,15 @@ public class DepartmentDto {
 	public DepartmentDto() {
 		
 	}
-	public DepartmentDto(Long departmentid, String departmentName, String departmentAddress, String departmentCode) {
-		this.departmentid = departmentid;
+	public DepartmentDto(Long id, String departmentName, String departmentAddress, String departmentCode) {
+		this.id = id;
 		this.departmentName = departmentName;
 		this.departmentAddress = departmentAddress;
 		this.departmentCode = departmentCode;
 	}
 	@Override
 	public String toString() {
-		return "DepartmentDto [departmentid=" + departmentid + ", departmentName=" + departmentName
+		return "DepartmentDto [id=" + id + ", departmentName=" + departmentName
 				+ ", departmentAddress=" + departmentAddress + ", departmentCode=" + departmentCode + "]";
 	}
 	

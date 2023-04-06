@@ -2,15 +2,15 @@ package com.example.UserRestTemplate.Entity;
 
 public class UserDto {
 
-	 private int id;
+	 private int userid;
 	    private String firstName;
 	    private String lastName;
 	    private String email;
-		public int getId() {
-			return id;
+		public int getUserid() {
+			return userid;
 		}
-		public void setId(int id) {
-			this.id = id;
+		public void setUserid(int userid) {
+			this.userid = userid;
 		}
 		public String getFirstName() {
 			return firstName;
@@ -37,12 +37,12 @@ public class UserDto {
 		
 		@Override
 		public String toString() {
-			return "UserDto [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+			return "UserDto [userid=" + userid + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 					+ "]";
 		}
 		public UserDto(int id, String firstName, String lastName, String email) {
 			super();
-			this.id = id;
+			this.userid = id;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.email = email;

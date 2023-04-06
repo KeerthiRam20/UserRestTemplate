@@ -13,60 +13,73 @@ public class User {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int userid;
     private String firstName;
     private String lastName;
     @Column(nullable = false, unique = true)
     private String email;
-    private String departmentId;
-    
-	public int getId() {
-		return id;
+    private String id;
+
+	public User(){
+
 	}
-	public void setId(int id) {
-		this.id = id;
+
+	public int getUserid() {
+		return userid;
 	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getDepartmentId() {
-		return departmentId;
+
+	public String getId() {
+		return id;
 	}
-	public void setDepartmentId(String departmentId) {
-		this.departmentId = departmentId;
-	}
-	
-	public User() {
-		
-	}
-	
-	public User(int id, String firstName, String lastName, String email, String departmentId) {
+
+	public void setId(String id) {
 		this.id = id;
+	}
+
+	public User(int userid, String firstName, String lastName, String email, String id) {
+		this.userid = userid;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.departmentId = departmentId;
+		this.id = id;
 	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", departmentId=" + departmentId + "]";
+		return "User{" +
+				"userid=" + userid +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", email='" + email + '\'' +
+				", id='" + id + '\'' +
+				'}';
 	}
-    
-    
 }

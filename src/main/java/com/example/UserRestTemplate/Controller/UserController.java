@@ -14,6 +14,8 @@ import com.example.UserRestTemplate.Entity.ResponseDto;
 import com.example.UserRestTemplate.Entity.User;
 import com.example.UserRestTemplate.Service.IUserService;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("api/users")
 public class UserController {
@@ -28,9 +30,16 @@ public class UserController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<ResponseDto> getUser(@PathVariable("id") int userId){
-        ResponseDto responseDto = userService.getUser(userId);
+    public ResponseEntity<ResponseDto> getUser(@PathVariable("id") int userid ){
+        ResponseDto responseDto = userService.getUser(userid );
         return ResponseEntity.ok(responseDto);
+    }
+
+    @GetMapping(value = "/allusers")
+    public ResponseEntity<List<User>> getAllDepartments()
+    {
+        List<User> allDepartments = userService.getAllUsers();
+        return new ResponseEntity<List<User>>(allDepartments,HttpStatus.OK);
     }
 
 }
